@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>燃やす</title>
+    <link rel="stylesheet" href="css/fire_design.css">
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+  </head>
+  <body>
+
+  <script type="text/javascript">
+    $(function() {
+      $("#Fire_video").hide();  //video要素を隠す
+
+      $('#burn_butoon').click(function(){
+        $("#Fire_video").show();  //video要素の表示
+        $("#Fire_video")[00].play();  //再生
+        $('.Text').css('color','#FFFFFB');  //テキストを消す（背景と同じ色にする）
+          // videoをじわじわ消す
+          setTimeout(function(){
+             $("#Fire_video").fadeOut('slow');
+          },5000);
+      })
+
+    })
+  </script>
+
+  <video src="nc193929.mp4" id="Fire_video"></video>
+  <div class="Text">
+    まだあげ初めし前髪の <br>
+    林檎のもとに見えしとき <br>
+    前にさしたる花櫛の <br>
+    花ある君と思ひけり <br><br>
+
+    やさしく白き手をのべて <br>
+    林檎をわれにあたへしは <br>
+    薄紅の秋の実に <br>
+    人こひ初めしはじめなり <br><br>
+
+    わがこゝろなきためいきの <br>
+    その髪の毛にかゝるとき <br>
+    たのしき恋の盃を <br>
+    君が情に酌みしかな <br><br>
+
+    林檎畑の樹の下に <br>
+    おのづからなる細道は <br>
+    誰が踏みそめしかたみぞと <br>
+    問ひたまふこそこひしけれ <br>
+  </div>
+
+  <div id="burn_butoon" tabindex="0" role="button">燃やす</div>
+
+  </body>
+</html>
+
+<!-- 参考サイト -->
+<!-- http://semooh.jp/jquery/api/effects/fadeOut/%5Bspeed%5D%2C+%5Bcallback%5D/ -->
+<!-- https://ziyudom.com/js-delay/ -->
+<!-- https://qiita.com/sunnyG/items/faf1821ae09820e30ce8 -->
+<!-- https://arrown-blog.com/jquery-html5-tag/ -->
